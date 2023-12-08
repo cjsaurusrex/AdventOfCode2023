@@ -74,17 +74,6 @@ func getValue(source int, mappings []mapping) int {
 	}
 	return source
 }
-
-func getLocation(seed seed, mappings map[string][]mapping) int {
-	seed.soil = getValue(seed.seed, mappings["seed-to-soil"])
-	seed.fertilizer = getValue(seed.soil, mappings["soil-to-fertilizer"])
-	seed.water = getValue(seed.fertilizer, mappings["fertilizer-to-water"])
-	seed.light = getValue(seed.water, mappings["water-to-light"])
-	seed.temperature = getValue(seed.light, mappings["light-to-temperature"])
-	seed.humidity = getValue(seed.temperature, mappings["temperature-to-humidity"])
-	return getValue(seed.humidity, mappings["humidity-to-location"])
-}
-
 func getLocationFromSeed(seed int, mappings map[string][]mapping) int {
 	soil := getValue(seed, mappings["seed-to-soil"])
 	fertilizer := getValue(soil, mappings["soil-to-fertilizer"])
