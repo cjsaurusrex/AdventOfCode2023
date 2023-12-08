@@ -1,7 +1,7 @@
 package main
 
 import (
-	"adventOfCode2023/day7"
+	"adventOfCode2023/day8"
 	_ "embed"
 )
 
@@ -26,6 +26,9 @@ var day6Input string
 //go:embed day7/input.txt
 var day7Input string
 
+//go:embed day8/input.txt
+var day8Input string
+
 func main() {
 	//day1.Part1(&day1Input)
 	//day1.Part2(&day1Input)
@@ -39,6 +42,8 @@ func main() {
 	//day5.Part2(day5Input)
 	//day6.Part1(day6Input)
 	//day6.Part2(day6Input)
-	day7.Part1(day7Input)
-	day7.Part2(day7Input)
+	//day7.Part1(day7Input)
+	//day7.Part2(day7Input)
+	day8.Part1(day8Input)
+	day8.Part2(day8Input)
 }
